@@ -27,7 +27,7 @@ async function main() {
       transport: {
         type: "stdio"
       },
-      basePath: process.cwd() + '/dist' // Explicitly set to avoid path resolution issues
+      basePath: process.cwd() + '/dist' // Set basePath to the dist directory where tools are located
     });
 
     // Note: Tools will be automatically discovered by the server

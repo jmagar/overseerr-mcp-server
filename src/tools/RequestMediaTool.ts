@@ -215,6 +215,5 @@ class RequestMediaTool extends BaseTool<RequestMediaInput> {
   }
 }
 
-// Create an instance and export it directly
-const requestMediaTool = new RequestMediaTool();
-export default requestMediaTool; 
+// Export the class instead of an instance
+export default RequestMediaTool; 

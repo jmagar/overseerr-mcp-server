@@ -119,6 +119,5 @@ class GetRequestsTool extends BaseTool<GetRequestsInput> {
   }
 }
 
-// Create an instance and export it directly
-const getRequestsTool = new GetRequestsTool();
-export default getRequestsTool; 
+// Export the class instead of an instance
+export default GetRequestsTool; 
