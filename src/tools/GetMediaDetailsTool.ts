@@ -183,4 +183,6 @@ class GetMediaDetailsTool extends BaseTool<GetMediaDetailsInput> {
   }
 }
 
-export default GetMediaDetailsTool; 
+// Create an instance and export it directly
+const getMediaDetailsTool = new GetMediaDetailsTool();
+export default getMediaDetailsTool; 

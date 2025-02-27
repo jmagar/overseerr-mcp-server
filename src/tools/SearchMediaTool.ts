@@ -101,4 +101,6 @@ class SearchMediaTool extends BaseTool<SearchMediaInput> {
   }
 }
 
-export default SearchMediaTool; 
+// Create an instance and export it directly
+const searchMediaTool = new SearchMediaTool();
+export default searchMediaTool; 
