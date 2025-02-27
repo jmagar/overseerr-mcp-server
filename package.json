@@ -1,0 +1,50 @@
+{
+  "name": "overseerr-mcp-server",
+  "version": "0.0.1",
+  "description": "MCP server for interacting with Overseerr",
+  "type": "module",
+  "bin": {
+    "overseerr-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "mcp-build",
+    "prepare": "npm run build",
+    "watch": "tsc --watch",
+    "start": "node dist/index.js",
+    "dev": "tsc && node dist/index.js",
+    "debug": "npx @modelcontextprotocol/inspector dist/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.1",
+    "mcp-framework": "^0.1.25",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^6.1.1",
+    "@types/node": "^20.17.19",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/overseerr-mcp-server.git"
+  },
+  "keywords": [
+    "overseerr",
+    "mcp",
+    "modelcontextprotocol",
+    "ai",
+    "claude",
+    "media",
+    "plex",
+    "jellyfin",
+    "emby"
+  ]
+}
