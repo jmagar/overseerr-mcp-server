@@ -185,3 +185,11 @@ class GetMediaDetailsTool extends BaseTool<GetMediaDetailsInput> {
 
 // Export the class instead of an instance
 export default GetMediaDetailsTool; 
+
+// Create an instance and register it with global registry
+const instance = new GetMediaDetailsTool();
+if (typeof (global as any).__MCP_TOOLS !== 'undefined') {
+  (global as any).__MCP_TOOLS.push(instance);
+} else {
+  (global as any).__MCP_TOOLS = [instance];
+} 

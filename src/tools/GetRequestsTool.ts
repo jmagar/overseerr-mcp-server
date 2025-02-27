@@ -121,3 +121,11 @@ class GetRequestsTool extends BaseTool<GetRequestsInput> {
 
 // Export the class instead of an instance
 export default GetRequestsTool; 
+
+// Create an instance and register it with global registry
+const instance = new GetRequestsTool();
+if (typeof (global as any).__MCP_TOOLS !== 'undefined') {
+  (global as any).__MCP_TOOLS.push(instance);
+} else {
+  (global as any).__MCP_TOOLS = [instance];
+} 

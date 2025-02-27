@@ -21,4 +21,13 @@ class ExampleTool extends MCPTool<ExampleInput> {
   }
 }
 
+// Create an instance and register it with global registry
+const instance = new ExampleTool();
+if (typeof (global as any).__MCP_TOOLS !== 'undefined') {
+  (global as any).__MCP_TOOLS.push(instance);
+} else {
+  (global as any).__MCP_TOOLS = [instance];
+}
+
+// Also export the class for compatibility
 export default ExampleTool;
