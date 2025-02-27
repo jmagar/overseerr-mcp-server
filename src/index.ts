@@ -22,11 +22,12 @@ async function main() {
       process.exit(1);
     }
     
-    // Create server with STDIO transport
+    // Create server with STDIO transport and explicit basePath
     const server = new MCPServer({
       transport: {
         type: "stdio"
-      }
+      },
+      basePath: process.cwd() + '/dist' // Explicitly set to avoid path resolution issues
     });
 
     // Note: Tools will be automatically discovered by the server
