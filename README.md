@@ -2,6 +2,10 @@
 
 A Model Context Protocol (MCP) server that allows Claude to interact with Overseerr, a request management and media discovery tool for Plex.
 
+<a href="https://glama.ai/mcp/servers/vs6qmcl6bm">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/vs6qmcl6bm/badge" alt="Overseerr Server MCP server" />
+</a>
+
 ## Features
 
 - Search for movies and TV shows
