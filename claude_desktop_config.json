@@ -1,0 +1,34 @@
+Linux/Mac:
+```json
+{
+  "overseerr": {
+    "command": "node",
+    "args": ["/path/to/overseerr/packages/server/dist/index.js"],
+    "cwd": "/path/to/overseerr",
+    "transport": {
+      "type": "stdio"
+    },
+    "env": {
+      "OVERSEERR_URL": "your_overseerr_url",
+      "OVERSEERR_API_KEY": "your_api_key"
+    }
+  }
+}
+```
+
+Windows (note the double backslashes):
+```json
+{
+  "overseerr": {
+    "command": "node",
+    "args": ["C:\\path\\to\\overseerr\\packages\\server\\dist\\index.js"],
+    "cwd": "C:\\path\\to\\overseerr",
+    "transport": {
+      "type": "stdio"
+    },
+    "env": {
+      "OVERSEERR_URL": "your_overseerr_url",
+      "OVERSEERR_API_KEY": "your_api_key"
+    }
+  }
+}

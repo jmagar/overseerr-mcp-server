@@ -1,0 +1,24 @@
+{
+  "name": "overseerr-mcp",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "pnpm --filter @overseerr-mcp/shared build && pnpm --filter @overseerr-mcp/config build && pnpm --filter @overseerr-mcp/overseerr build && pnpm --filter @overseerr-mcp/server build",
+    "dev": "pnpm -r dev",
+    "start": "node packages/server/dist/index.js",
+    "lint": "eslint ."
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.7.0",
+    "dotenv": "^16.0.0",
+    "zod": "^3.0.0"
+  }
+} 
