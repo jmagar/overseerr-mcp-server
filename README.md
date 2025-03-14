@@ -1,4 +1,5 @@
 # Overseerr MCP
+[![smithery badge](https://smithery.ai/badge/@jmagar/overseerr-mcp-server)](https://smithery.ai/server/@jmagar/overseerr-mcp-server)
 
 A Model Context Protocol (MCP) integration for Overseerr that enables natural language interaction with your media request system through Claude AI. This server allows you to search for movies and TV shows, make media requests, and manage your Overseerr instance using conversational language.
 
@@ -47,6 +48,14 @@ Claude: I'll search for cooking-related TV shows...
 - Easy configuration through environment variables
 
 ## Setup
+
+### Installing via Smithery
+
+To install Overseerr MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@jmagar/overseerr-mcp-server):
+
+```bash
+npx -y @smithery/cli install @jmagar/overseerr-mcp-server --client claude
+```
 
 ### Prerequisites
 - Node.js
