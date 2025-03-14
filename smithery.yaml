@@ -1,0 +1,33 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - overseerrUrl
+      - overseerrApiKey
+    properties:
+      overseerrUrl:
+        type: string
+        description: The URL for the Overseerr instance
+      overseerrApiKey:
+        type: string
+        description: The API Key for the Overseerr instance
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => {
+      return {
+        command: 'node',
+        args: ['packages/server/dist/index.js'],
+        env: {
+          OVERSEERR_URL: config.overseerrUrl,
+          OVERSEERR_API_KEY: config.overseerrApiKey
+        }
+      };
+    }
+  exampleConfig:
+    overseerrUrl: https://your.overseerr.instance
+    overseerrApiKey: your_api_key_here
